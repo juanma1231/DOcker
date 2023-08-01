@@ -1,0 +1,5 @@
+FROM openjdk:17
+RUN mkdir -p /home/
+COPY out/artifacts/platzi_pizzeria_jar/*.jar /home/app
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "home/app/platzi-pizzeria.jar"]
